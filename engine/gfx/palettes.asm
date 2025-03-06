@@ -1099,3 +1099,15 @@ INCLUDE "data/pokemon/palettes.asm"
 INCLUDE "data/sgb/sgb_palettes.asm"
 
 INCLUDE "data/sgb/sgb_border.asm"
+
+SendPokeballPal:
+	ld a, PAL_REDBAR
+	jr SendCustomPacket
+
+
+SendCustomPacket:
+	ld [wWholeScreenPaletteMonSpecies], a
+	ld c, 2
+	ld b, SET_PAL_POKEMON_WHOLE_SCREEN
+	jp RunPaletteCommand
+
