@@ -202,11 +202,14 @@ SetPal_PokemonWholeScreen:
 	call CopyData
 	pop bc
 	ld a, c
-	and a
+	cp 1
 	ld a, PAL_BLACK
-	jr nz, .next
+	jr z, .next
+  ld a, c
+  cp 2
 	ld a, [wWholeScreenPaletteMonSpecies]
-	call DeterminePaletteIDOutOfBattle
+	jr z, .next
+  call DeterminePaletteIDOutOfBattle
 .next
 	ld [wPalPacket + 1], a
 	ld hl, wPalPacket
