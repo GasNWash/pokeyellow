@@ -1,3 +1,34 @@
+_ViridianGymJessieJamesText1::
+	text "Not another step,"
+	line "brat!@"
+	text_end
+
+_ViridianGymJessieJamesText2::
+	text "How dare you"
+	line "humiliate us."
+
+	para "It's payback time,"
+	line "you brat!"
+	done
+
+_ViridianGymJessieJamesText3::
+	text "Such"
+	line "a dreadful twerp!"
+	prompt
+
+_ViridianGymJessieJamesText4::
+	text "Looks like TEAM"
+	line "ROCKET's blasting"
+	cont "off again!@"
+	text_end
+
+
+
+
+
+
+
+
 _ViridianGymGiovanniPreBattleText::
 	text "Fwahahaha! This is"
 	line "my hideout!"
