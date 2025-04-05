@@ -196,10 +196,10 @@ ViridianGymScript_455a5:
 	ret nz
 	ResetEvent EVENT_BEAT_VIRIDIAN_GYM_JESSIE_JAMES_ON_LEFT
 	ld a, [wXCoord]
-	cp $18
+	cp $07
 	jr z, .asm_455c2
 	ld a, [wXCoord]
-	cp $19
+	cp $08
 	ret nz
 	SetEvent EVENT_BEAT_VIRIDIAN_GYM_JESSIE_JAMES_ON_LEFT
 .asm_455c2
