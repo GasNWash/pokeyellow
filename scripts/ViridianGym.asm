@@ -17,7 +17,7 @@ ViridianGym_Script:
 	db "GIOVANNI@"
 
 ViridianGymResetScripts:
-	CheckAndResetEvent EVENT_052
+	CheckAndResetEvent EVENT_BEAT_VIRIDIAN_GYM_JESSIE_JAMES_ON_LEFT
 	call nz, ViridianGymScript_HideJessieJames
 	xor a
 	ld [wJoyIgnore], a
@@ -192,14 +192,14 @@ ViridianGymReceiveTM27:
 
 ViridianGymScript_455a5:
 	ld a, [wYCoord]
-	cp $e
+	cp $c
 	ret nz
 	ResetEvent EVENT_BEAT_VIRIDIAN_GYM_JESSIE_JAMES_ON_LEFT
 	ld a, [wXCoord]
-	cp $07
+	cp $06
 	jr z, .asm_455c2
 	ld a, [wXCoord]
-	cp $08
+	cp $07
 	ret nz
 	SetEvent EVENT_BEAT_VIRIDIAN_GYM_JESSIE_JAMES_ON_LEFT
 .asm_455c2
@@ -325,7 +325,7 @@ ViridianGymScript11:
 	xor a
 	ldh [hJoyHeld], a
 	ld [wJoyIgnore], a
-	SetEvent EVENT_052
+	SetEvent EVENT_BEAT_VIRIDIAN_GYM_JESSIE_JAMES
 	ld a, SCRIPT_VIRIDIANGYM_SCRIPT12
 	call ViridianGymSetScript
 	ret
